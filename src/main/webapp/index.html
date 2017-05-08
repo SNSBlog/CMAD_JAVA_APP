@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Library</title>
+<link href="library.css" rel="stylesheet" />
+<script src="jquery-2.1.3.js"></script>
+<script src="library.js"></script>
+
+
+
+</head>
+<body>
+	<h1>S and S Blog Application</h1>
+	<a href="#" id="addUser">Register</a> |
+	<a href="#" id = "login">login</a> |
+	<a href="#" id = "deleteuser">deleteUser</a>
+	
+	<hr />
+	<div id='addForm'>
+		<h2>Add New User</h2>
+		<table>
+			<tr>
+				<td>User Name1:</td>
+				<td><input id="name1" /></td>
+			</tr>
+			<tr>
+				<td>Password1:</td>
+				<td><input id="password1" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><button id="addBtn">Add User</button></td>
+			</tr>
+		</table>
+	</div>
+	<div id='addResult'>Successfully added the book!</div>
+	<div id='loginForm'>
+		<h2>Login to Blog1</h2>
+		<table>
+			<tr>
+				<td>User Name:</td>
+				<td><input id='name3' /></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input id='password3' /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><button id = "loginButton">Login</button></td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id = "display"></div>
+	<div id='DeleteForm'>
+		<h2>Delete User</h2>
+		<table>
+			<tr>
+				<td>User Name:</td>
+				<td><input id='name2' /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><button id = "DeleteButton">Delete</button></td>
+			</tr>
+		</table>
+	</div>
+	
+	
+	
+	<div id = "name_feedback"></div>
+	<div id = "loginresult"> </div>
+	
+	<div id='findResult'>
+		<h2>Search Results</h2>
+		<table>
+			<tr>
+				<td>ISBN:</td>
+				<td>123</td>
+			</tr>
+			<tr>
+				<td>Title:</td>
+				<td>asdfaf asdf</td>
+			</tr>
+		</table>
+	</div>
+	
+	
+	
+	
+	<div id='addblog'>
+		<h2>Add New Blog</h2>
+		<table>
+			<tr>
+				<td><label for="Title" id ="label1"> Title1 </label><br><br></td>
+				
+			</tr>
+			<tr>
+				<td><textarea rows="10" cols="100" id ="blogtext">hello </textarea>
+				</td>
+				
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><button id="PostBlogBtn">Post Blog</button></td>
+			</tr>
+		</table>
+	</div>
+
+
+<div id='addcomment'>
+		<h2>Comments</h2>
+		<table>
+			<tr>
+				<td><label for="Title" id ="label2"> Comments: </label><br><br></td>
+				
+			</tr>
+			<tr>
+				<td><textarea rows="10" cols="100" id ="commenttext">hello ALL</textarea>
+				</td>
+				
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><button id="PostCommentBtn">Comment On Blog</button></td>
+			</tr>
+		</table>
+	</div>
+	
+
+<div id='MainSearchForm'>
+		<h2>Blog Search</h2>
+		<table>
+			<tr align="center">
+				<td><input id='search1'  /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><button id = "TitleSearchButton">Search Blog on Title</button></td>
+				<td colspan="2" align="left"><button id = "UserSearchButton">Search Blog on User</button></td>
+			</tr>
+		</table>
+	</div>
+	
+	
+	
+	
+</body>
+</html>

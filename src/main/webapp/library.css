@@ -1,0 +1,12 @@
+#addForm, #addResult, #findForm, #findResult, #addblog, #addcomment, #DeleteForm {
+	display: none;
+
+} 
+
+#label2{
+	color:yellow;
+}
+
+body{
+	backgroundcolor:lightblue;
+}
