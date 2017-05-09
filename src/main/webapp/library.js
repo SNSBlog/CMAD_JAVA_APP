@@ -16,13 +16,13 @@ $(document).ready(function() {
 		var isbn = $('#name1').val();
 		alert(isbn);
 		var title = $('#password1').val();
-		//alert(title);
-		//var id1= 3;
+		alert(title);
+		var id1= 3;
 		
 	//	var book ={ "Username":"John", "Personid":30, "Password":"New York"};
 		var user = {
-			Username : isbn,
-			Password : title
+			username : isbn,
+			password : title
 		};
 		$.ajax({
 			url : 'rest/User',
