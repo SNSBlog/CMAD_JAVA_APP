@@ -1,5 +1,5 @@
 ///$(document).ready( function(){$("#addblog").hide();});
-
+//parent.window.location.reload(true);
 
 $(document).ready(function() {
 	$("#addUser").click(function(e) {
@@ -13,19 +13,19 @@ $(document).ready(function() {
 	});
 	$("#addBtn").click(function() {
 		$("#addForm").hide();
-		var isbn = $('#name1').val();
-		alert(isbn);
-		var title = $('#password1').val();
-		alert(title);
-		var id1= 3;
+		var isbn1 = $('#name1').val();
+		alert(isbn1);
+		var title1 = $('#password1').val();
+		alert(title1);
+		//var id1= 3;
 		
 	//	var book ={ "Username":"John", "Personid":30, "Password":"New York"};
-		var user = {
-			username : isbn,
-			password : title
+		var user1 = {
+			username : isbn1,
+			password : title1
 		};
 		$.ajax({
-			url : 'rest/User',
+			url : 'rest/User/',
 			type : 'post',
 			dataType : 'text',
 			contentType: "application/json; charset=utf-8",
@@ -33,16 +33,17 @@ $(document).ready(function() {
 		            alert('sending data');
 		            
 		        },
+		        data : JSON.stringify(user1),
 		        success: function() {
 		          //  callback(data); // return data in callback
 		        document.write("User "+ data+ " is added");
 		        },
 			error: function(){
 				document.write("Can't add user!");
-			},
+			}
 		        
-			data : JSON.stringify(user)
-		});
+			
+			});
 	});
 
 });
@@ -58,32 +59,47 @@ $("#loginButton").click(function(){
 	alert(password);
 	var logindata = 
 		{
-			Username : name,
-			Password : password
+			username : name,
+			password : password
 		};
+	
+	//
 	$.ajax({
-		url : 'rest/User/FindUser',
-		type : 'post',
+	   url : 'rest/User/',
+		//url : 'rest/User?username='+name+'&password='+password,
+		type : 'GET',
 		dataType : 'text',
-		contentType: "application/json; charset=utf-8",
+		contentType: "application/json ; charset=utf-8",
 		success : function(data) {
-			alert(name+ data );
+			
+			alert(' success result');
+			//document.write(data);
+			//alert(name+ data.postid[0] );
+			var receive_data = JSON.parse(data);
+			$.each(receive_data, function(idx,obj){
+			alert(obj.posttitle);
+			$('.change1').text(obj.posttitle);
+		});
+			
+			
 			$('#addUser').hide();
 			$('#login').hide();
-			$('#deleteuser').hide();
-			$('#blogtabs').show();
+		$('#deleteuser').hide();
+		//	$('#blogtabs').show();
 			$("#loginresult").html("<h1>Welcome " +name + "</h1>");
 			$("#addblog").show();
-			$("#addcomment").show();
-			//$("#loginresult").append.text(name);
-			//.load('login1.html');
+			
 							
-			//alert(' success result')
+			
 		},
-		 error: function(){
-			    alert(' error result');
+		 error: function(jqXHR, textstatus,errorThrown){
+			    //alert(' error result');
+			 document.write("There is an error in find user");
+			 alert("status: "+ textstatus); alert("Error: "+ errorThrown);
 			  },
-		data : JSON.stringify(logindata)
+		//data : name+"/"+password
+			//  data : name+"/"+password
+		data: logindata
 	});
 
 		
@@ -124,6 +140,12 @@ $("#DeleteButton").click(function(){
 });
 
 });
+
+
+
+
+
+
 
 
 //function(data) {
