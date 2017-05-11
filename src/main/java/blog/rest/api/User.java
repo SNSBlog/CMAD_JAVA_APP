@@ -33,8 +33,10 @@ public class User  {
 	
 	
 	@Id
-	
+	@Column(name="username")
 	private  String username;
+	
+	@Column(name="password")
 	private  String password;
 
 	//@OneToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL, mappedBy="username")

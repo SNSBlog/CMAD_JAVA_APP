@@ -7,5 +7,5 @@ public interface UserInterface {
 
 	public int delete(String user3);
 
-	public int find(String user4);
+	public Object find(String user4, String passwd);
 }

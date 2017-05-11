@@ -8,6 +8,6 @@ public interface UserDAOInterface {
 
 	//public int deleteUser(String user3);
 	
-//	public int FindUser(String user4);
+	public Object FindUser(String user4, String passwd);
 }
 
