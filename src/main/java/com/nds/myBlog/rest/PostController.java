@@ -35,6 +35,8 @@ public class PostController {
 		//user.setUsername("swetang");
 		//user.setPassword("2234");
 		//throw new MyApplicationException();
+		
+		//TODO finish the GWT auth
 		int usr_fnd =post1.addPost(post_data);
 		
 		System.out.println("blogpost  after is "+ post_data.getBlogpost());
