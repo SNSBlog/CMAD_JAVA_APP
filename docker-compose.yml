@@ -1,1 +1,7 @@
 
+version: '2'
+services:
+  app:
+    image: swetang/tomcatapp:latest
+    ports:
+      - 7000:8080
