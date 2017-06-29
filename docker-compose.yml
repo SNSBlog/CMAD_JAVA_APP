@@ -1,6 +1,6 @@
-version: "3"
+version: "2"
 services:
   app:
-    image: shamikmaity/cmad_tomcatapp:latest
+    image: swetang/tomcatapp:latest
     ports:
       - 7000:8080
